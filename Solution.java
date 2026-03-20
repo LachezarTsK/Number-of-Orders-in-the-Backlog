@@ -52,7 +52,6 @@ public class Solution {
                 minHeapSellOrdersBacklog.add(new Order(sell.price, sell.quantity - buyQuantityBeforeUpdate));
             }
         }
-
         if (buyQuantity > 0) {
             maxHeapBuyOrdersBacklog.add(new Order(buyPrice, buyQuantity));
         }
@@ -69,8 +68,7 @@ public class Solution {
             if (buy.quantity - sellQuantityBeforeUpdate > 0) {
                 maxHeapBuyOrdersBacklog.add(new Order(buy.price, buy.quantity - sellQuantityBeforeUpdate));
             }
-        }
-        
+        }        
         if (sellQuantity > 0) {
             minHeapSellOrdersBacklog.add(new Order(sellPrice, sellQuantity));
         }
